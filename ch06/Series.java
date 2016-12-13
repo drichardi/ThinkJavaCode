@@ -3,6 +3,7 @@
  */
 public class Series {
 
+    //standard void method
     public static void countup(int n) {
         if (n == 0) {
             System.out.println("Blastoff!");
@@ -12,41 +13,90 @@ public class Series {
         }
     }
 
+    //value method, must do something with the return value
+    //Compared to void methods, value methods differ in two ways
+    //They declare the type of the return value (the return type)
+    //They use at least one return statement to provide a return value
+    
+    //takes a double as a parameter and returns the area of a circle with a radius
     public static double calculateArea(double radius) {
-        double result = Math.PI * radius * radius;
-        return result;
+        double result = Math.PI * radius * radius; //temporary variables make debugging easier, especially stepping through
+        return result; //return immediately from this method and use the following expression as the return value
     }
-
+    //same function written more concisely
+    //note return expression must match declared return type
     public static double calculateArea2(double radius) {
         return Math.PI * radius * radius;
     }
-
+    //multiple return statements, one in each branch of a conditional
+    //only one will be executed 
+    //code that cannot be executed is called dead code
     public static double absoluteValue(double x) {
         if (x < 0) {
             return -x;
         } else {
             return x;
         }
+        System.out.println("This line is dead code.");
     }
-
+    public static double absoluteValue(double x) {
+        if(x < 0) {
+            return -x; 
+        } else if(x> 0) {
+            return x;
+        }
+        //syntax error - every possible path must reach a return statement
+        //no return path for x == 0 -error: missing return statement
+        
+    //Writing Methods
+    //Incremental Development
+        //Start with a working program and make small, incremental changes.
+        //At any point, if there is an error, you will know where to look.
+        
+        //Use variables to hold intermediate values so you can check them,
+        //either with print statements or by using a debugger.
+        
+        //Once the program is working, you can consolidate multiple statements into
+        //compound expressions (but only if it does not make the program more difficult 
+        //to read).
+        
+        //Distance Formula - distance = sqrt((x2 - x1)^2 + (y2 - y1)^2))
+        //what are inputs? -- parameters
+        //what is output? -- return value
+        
+        //use to make 'stub' contains method signature and a return statement
+        public static double distance
+               (double x1, double y1, double x2, double y2) {
+            return 0.0; //placeholder needed for program to compile.
+        }
+        //Good idea to think about testing before making methods
+        //in main double dist = distance(1.0,2.0,4.0,6.0);
+        //Horizontal distance is 3.0 and vertical 4.0, answer 5.0 (3,4,5) triangle
+        //helpful to know right answer
+        
+        
+        
+    //first step - find differences of x2-x1 and y2-y1
+        //store in temp variables
     public static double distance
             (double x1, double y1, double x2, double y2) {
         double dx = x2 - x1;
         double dy = y2 - y1;
-        System.out.println("dx is " + dx);
-        System.out.println("dy is " + dy);
+        //remove when finished called "scaffolding"
+        System.out.println("dx is " + dx); //should be 3.0
+        System.out.println("dy is " + dy); //should be 4.0
         return 0.0;
     }
-
+    //next step to square distances
     public static double distance2
             (double x1, double y1, double x2, double y2) {
         double dx = x2 - x1;
         double dy = y2 - y1;
         double dsquared = dx * dx + dy * dy;
-        System.out.println("dsquared is " + dsquared);
+        System.out.println("dsquared is " + dsquared); //should get 25.0
         return 0.0;
     }
-
+    //finally sqrt to get answer and return result
     public static double distance3
             (double x1, double y1, double x2, double y2) {
         double dx = x2 - x1;
@@ -56,6 +106,7 @@ public class Series {
         return result;
     }
 
+        //METHOD COMPOSITION
     public static double circleArea
             (double xc, double yc, double xp, double yp) {
         double radius = distance(xc, yc, xp, yp);
