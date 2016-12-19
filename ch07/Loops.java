@@ -10,7 +10,8 @@ public class Loops {
         }
         System.out.println("Blastoff!");
     }
-
+    //Collatz_conjecture - still not proven/disproven 
+    // facts do lean towards being true.
     public static void sequence(int n) {
         while (n != 1) {
             System.out.println(n);
