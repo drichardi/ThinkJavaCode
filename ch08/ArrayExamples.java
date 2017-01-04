@@ -10,9 +10,11 @@ public class ArrayExamples {
      */
     public static void main(String[] args) {
         int size = 10;
+        //declare and initialize
         int[] counts = new int[4];
         double[] values = new double[size];
 
+        //[] brackets to access elements of an array, use anywhere
         counts[0] = 7;
         counts[1] = counts[0] * 2;
         counts[2]++;
@@ -31,16 +33,18 @@ public class ArrayExamples {
         }
 
         int[] array = {1, 2, 3, 4};
-        printArray(array);
+        printArray(array); //make this function
 
         // printing an array as an object
-        System.out.println(array);
+        System.out.println(array); //shows type, address
 
         // printing with Arrays class
         System.out.println(Arrays.toString(array));
 
         // copying an array
+        
         double[] a = {1.0, 2.0, 3.0};
+        //double[] b = a; creates a reference to the same array.
         double[] b = new double[a.length];
         for (int i = 0; i < a.length; i++) {
             b[i] = a[i];
@@ -55,11 +59,11 @@ public class ArrayExamples {
         }
 
         // search
-        int index = search(a, 2.0);
+        int index = search(a, 2.0);//make this function
         System.out.println("index = " + index);
 
         // reduce
-        double total = sum(a);
+        double total = sum(a); //make this function
         System.out.println("total = " + total);
     }
 
