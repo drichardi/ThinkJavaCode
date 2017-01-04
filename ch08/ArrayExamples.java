@@ -57,6 +57,9 @@ public class ArrayExamples {
         for (int i = 0; i < a.length; i++) {
             a[i] = Math.pow(a[i], 2.0);
         }
+        //take the above block and make a method called powArray that takes a double array
+        //and returns a new array that contain the elements of the argument array squared.
+        //generalize it to take a second parameter and raise the elements to the given power.
 
         // search
         int index = search(a, 2.0);//make this function
