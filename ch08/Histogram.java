@@ -68,6 +68,12 @@ public class Histogram {
         for (int score : scores) {
             counts[score]++;
         }
+        
+        /*  For the foreach loop above, write a method called histogram that
+        *   takes an int array of scores from 0 to (but not including) 100, and 
+        *   returns a histogram of 100 counters. Generalize it to take the number 
+        *   counters as an argument.
+        */
     }
 
 }
