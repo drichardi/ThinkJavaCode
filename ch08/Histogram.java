@@ -44,11 +44,25 @@ public class Histogram {
 
         // making a histogram
         int[] counts = new int[100];
+        for(int i = 0; i < counts.length; i++) {
+            count[i] = inRange(scores, i, i+1);
+        }
+        
+        //more efficient loop that only traverses array once
         for (int i = 0; i < scores.length; i++) {
             int index = scores[i];
             counts[index]++;
         }
-
+        
+        //foreach
+        //basic for loop
+        for(int i = 0; i < values.length; i++){
+            System.out.println(values[i]);
+        }
+        //written as for each
+        for(int value : values) {
+            System.out.println(value);
+        }
         // histogram with enhanced for loop
         counts = new int[100];
         for (int score : scores) {
