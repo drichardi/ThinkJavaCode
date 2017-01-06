@@ -1,5 +1,14 @@
 /**
  * Fruit exercise.
+ * The purpose of this exercise is to practice reading code and recognizing
+ * the traversal patterns we have learned so far.  The following methods
+ * are hard to read, because instead of using meaningul names for the variables
+ * and methods, they use the names of fruit.
+ *
+ * For each method, write one sentence that describes what the method does, without
+ * getting into the details of how it works.
+ *
+ * For each variable, identify the role it plays.
  */
 public class Fruit {
 
